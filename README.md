@@ -18,17 +18,17 @@ First calculate p_0(x):
     
     p_0(x_0) = f_0 => p_0(x) = f_0
 
-    p_1(x) = p_0(x) + f\[x0,x1\](x-x0)
+    p_1(x) = p_0(x) + f[x0,x1](x-x0)
     
-    p_n(x) = p_n-1(x) + f\[x0,x1, xn\](x-x0)...(x-xn-1)
+    p_n(x) = p_n-1(x) + f[x0,x1, xn](x-x0)...(x-xn-1)
 
-f\[xi, xj\] is called the divided difference between i and j. It is defined as:
+f[xi, xj] is called the divided difference between i and j. It is defined as:
 
-    f\[x_p, x_{p+1}, ..., x_{p+v}\] = f\[x_{p+1}, ..., x_{p+v}\]/x_{p+v}-x_p
+    f[x_p, x_{p+1}, ..., x_{p+v}] = f[x_{p+1}, ..., x_{p+v}]/x_{p+v}-x_p
 
 and
 
-    f\[x_j] = f_j
+    f[x_j] = f_j
 
-In this implementation of Newton's divided differences interpolation, f\[...] is implemented as a matrix where f\[x_j,...,x_m] is stored in position (m, j), and calculated incrementally. The f\[]-terms that are being used in p, are in the first row of the matrix.
+In this implementation of Newton's divided differences interpolation, f[...] is implemented as a matrix where f[x_j,...,x_m] is stored in position (m, j), and calculated incrementally. The f[]-terms that are being used in p, are in the first row of the matrix.
 
